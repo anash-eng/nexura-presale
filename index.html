@@ -1,0 +1,102 @@
+// Nexura Presale Landing Page (React + TailwindCSS) - Enhanced UI
+import React from 'react';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { motion } from 'framer-motion';
+
+export default function PresalePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white p-4">
+      <header className="text-center py-16 px-4 max-w-4xl mx-auto">
+        <motion.h1 
+          initial={{ opacity: 0, y: -50 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.8 }} 
+          className="text-4xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
+        >
+          Join the Meme Revolution
+        </motion.h1>
+        <p className="text-lg md:text-xl text-gray-300 mb-6">
+          Buy $NEX – The Next Big Meme Coin on Solana
+        </p>
+        <Button className="bg-purple-600 hover:bg-purple-700 text-white text-lg px-6 py-3 rounded-2xl shadow-md transition">Connect Wallet</Button>
+      </header>
+
+      <main className="grid gap-8 max-w-4xl mx-auto px-4">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }} 
+          whileInView={{ opacity: 1, scale: 1 }} 
+          transition={{ duration: 0.5 }} 
+          viewport={{ once: true }}
+        >
+          <Card className="bg-gray-800 border-none rounded-2xl shadow-lg">
+            <CardContent className="p-6">
+              <h2 className="text-2xl font-bold mb-3 text-purple-400">Tokenomics</h2>
+              <ul className="list-disc ml-6 text-gray-300 space-y-1">
+                <li>Total Supply: 15,000,000,000 $NEX</li>
+                <li>Presale Allocation: 30%</li>
+                <li>Price: 1 SOL = 1,000,000 $NEX</li>
+              </ul>
+            </CardContent>
+          </Card>
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }} 
+          whileInView={{ opacity: 1, scale: 1 }} 
+          transition={{ duration: 0.5 }} 
+          viewport={{ once: true }}
+        >
+          <Card className="bg-gray-800 border-none rounded-2xl shadow-lg">
+            <CardContent className="p-6">
+              <h2 className="text-2xl font-bold mb-3 text-pink-400">How to Buy</h2>
+              <ol className="list-decimal ml-6 text-gray-300 space-y-1">
+                <li>Connect your Phantom Wallet</li>
+                <li>Select how much SOL to invest</li>
+                <li>Click “Buy” and receive $NEX after presale</li>
+              </ol>
+            </CardContent>
+          </Card>
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }} 
+          whileInView={{ opacity: 1, scale: 1 }} 
+          transition={{ duration: 0.5 }} 
+          viewport={{ once: true }}
+        >
+          <Card className="bg-gray-800 border-none rounded-2xl shadow-lg">
+            <CardContent className="p-6">
+              <h2 className="text-2xl font-bold mb-3 text-green-400">Referral Program</h2>
+              <p className="text-gray-300 mb-3">
+                Invite friends with your link and earn 500 $NEX for each valid referral.
+              </p>
+              <Button variant="outline" className="border-purple-500 text-purple-400 hover:bg-purple-700 hover:text-white transition">Get Your Link</Button>
+            </CardContent>
+          </Card>
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }} 
+          whileInView={{ opacity: 1, scale: 1 }} 
+          transition={{ duration: 0.5 }} 
+          viewport={{ once: true }}
+        >
+          <Card className="bg-gray-800 border-none rounded-2xl shadow-lg">
+            <CardContent className="p-6">
+              <h2 className="text-2xl font-bold mb-3 text-yellow-400">Socials</h2>
+              <ul className="text-gray-300 space-y-1">
+                <li><a href="https://instagram.com/_nexura" target="_blank" className="text-purple-400 underline hover:text-pink-400">Instagram</a></li>
+                <li><a href="https://t.me/nexuraGlobal" target="_blank" className="text-purple-400 underline hover:text-pink-400">Telegram</a></li>
+              </ul>
+            </CardContent>
+          </Card>
+        </motion.div>
+      </main>
+
+      <footer className="text-center mt-16 text-sm text-gray-500">
+        Nexura © 2025 — Built for the culture.
+      </footer>
+    </div>
+  );
+}
